@@ -7,7 +7,7 @@ export default function HeroSection() {
         "Flutter Developer",
         "Android & iOS Developer",
         "Smart Coder",
-        "FreeLancer"
+        "Freelancer"
     ];
 
     const [index, setIndex] = useState(0); // current text index
@@ -19,10 +19,9 @@ export default function HeroSection() {
 
         const timeout = setTimeout(() => {
             setSubIndex((prev) => prev + (reverse ? -1 : 1));
-        }, reverse ? 50 : 120); // typing speed / deleting speed
+        }, reverse ? 50 : 120);
 
         if (!reverse && subIndex === texts[index].length + 1) {
-            // pause before deleting
             setTimeout(() => setReverse(true), 1000);
             return;
         }
@@ -36,32 +35,30 @@ export default function HeroSection() {
     }, [subIndex, index, reverse]);
 
     return (
-        <div className="bg-[#ACDBFB]/50 grid grid-cols-1 sm:grid-cols-2 items-center px-12 py-12 min-h-screen">
+        <div className="bg-[#ACDBFB]/50 min-h-screen flex flex-col-reverse sm:flex-row items-center px-6 sm:px-12 py-12 gap-8">
             {/* Text Section */}
-            <div className="space-y-6 ">
-                <h1 className="text-4xl sm:text-5xl font-bold text-gray-800">
+            <div className="flex-1 flex flex-col justify-center space-y-4 sm:space-y-6 text-center sm:text-left">
+                <h1 className="text-3xl sm:text-5xl font-bold text-gray-800">
                     Hi, I'm <span className="text-cyan-700">Nitesh Gupta</span>
                 </h1>
-                <p className="text-lg text-gray-600">
+                <p className="text-base sm:text-lg text-gray-600">
                     A passionate full-stack developer who loves building modern web applications.
                 </p>
 
                 {/* Typing Animation */}
-                <h2 className="text-3xl sm:text-3xl font-bold  text-cyan-700">
-                    {`${texts[index].substring(0, subIndex)}`}
+                <h2 className="text-xl sm:text-3xl font-bold text-cyan-700">
+                    {texts[index].substring(0, subIndex)}
                     <span className="border-r-2 border-cyan-700 animate-pulse ml-1"></span>
                 </h2>
             </div>
 
             {/* Image Section */}
-            <div className="flex justify-center">
+            <div className="flex-1 flex justify-center sm:justify-end">
                 <img
                     src="/me.png"
                     alt="Smart Coder"
-                    className="h-72 w-72 sm:h-96 sm:w-96 shadow-xl rounded-full  object-cover"
+                    className="h-48 w-48 sm:h-80 sm:w-80 md:h-96 md:w-96 shadow-xl rounded-full object-cover"
                 />
-                {/* Thought  */}
-
             </div>
         </div>
     );

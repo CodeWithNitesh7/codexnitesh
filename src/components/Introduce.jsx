@@ -1,5 +1,4 @@
 import React from "react";
-
 import Tilt from "react-parallax-tilt";
 import {
     AiFillGithub,
@@ -8,67 +7,65 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 
-export default function Intrduce() {
+export default function Introduce() {
     return (
-        <section className="bg-[#ACDBFB]/50 py-20 px-12" id="about">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="bg-[#ACDBFB]/50 py-20 px-6 sm:px-12" id="about">
+            <div className="max-w-7xl mx-auto">
                 {/* Main Content */}
-                <div className="flex flex-col md:flex-row items-center gap-10 md:gap-30">
-                    {/* Image Section */}
-                    <div className="flex-1 flex justify-center md:justify-end">
-                        <Tilt>
-                            <img
-                                src='/Avtar.png'
-                                alt="avatar"
-                                className="w-72 h-72 md:w-96 md:h-96 object-cover rounded-full shadow-lg"
-                            />
-                        </Tilt>
-                    </div>
+                <div className="flex flex-col-reverse md:flex-row items-center gap-8 md:gap-16">
                     {/* Text Section */}
-                    <div className="flex-1 space-y-6">
-                        <h1 className="text-4xl md:text-5xl font-bold text-gray-800">
+                    <div className="flex-1 space-y-6 text-center md:text-left">
+                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-800">
                             LET ME <span className="text-cyan-600">INTRODUCE</span> MYSELF
                         </h1>
-                        <p className="text-gray-700 text-lg md:text-base leading-relaxed">
-                            I fell in love with programming and I have at least learnt
-                            something, I think… 🤷‍♂
-                            <br />
-                            <br />
+                        <p className="text-gray-700 text-base sm:text-lg md:text-lg leading-relaxed">
+                            I fell in love with programming and I have at least learnt something, I think… 🤷‍♂
+                            <br /><br />
                             I am fluent in classics like{" "}
                             <span className="text-cyan-600 font-semibold">
-                                Java, Javascript and Python.
-                            </span>
-                            <br />
-                            <br />
+                                Java, Javascript and Python
+                            </span>.
+                            <br /><br />
                             My field of Interest's are building new{" "}
                             <span className="text-cyan-600 font-semibold">
                                 Web Technologies and Products
                             </span>{" "}
                             and also in areas related to{" "}
-                            <span className="text-cyan-600 font-semibold">App Development.</span>
-                            <br />
-                            <br />
+                            <span className="text-cyan-600 font-semibold">App Development</span>.
+                            <br /><br />
                             Whenever possible, I also apply my passion for developing products
                             with <span className="text-cyan-600 font-semibold">Node.js</span> and{" "}
                             <span className="text-cyan-600 font-semibold">
-                                Modern Javascript Library and Frameworks
+                                Modern Javascript Libraries & Frameworks
                             </span>{" "}
                             like <span className="text-cyan-600 font-semibold">React.js and Next.js</span>.
                         </p>
                     </div>
 
+                    {/* Image Section */}
+                    <div className="flex-1 flex justify-center md:justify-end">
+                        <Tilt>
+                            <img
+                                src="/Avtar.png"
+                                alt="avatar"
+                                className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-lg"
+                            />
+                        </Tilt>
+                    </div>
                 </div>
 
                 {/* Social Links */}
-                <div className="mt-16 text-center md:text-right px-8">
-                    <h2 className="text-3xl font-bold text-gray-800">FIND ME ON</h2>
-                    <p className="text-gray-700 text-lg mt-2">
+                <div className="mt-12 md:mt-16 text-center md:text-left">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
+                        FIND ME ON
+                    </h2>
+                    <p className="text-gray-700 text-base sm:text-lg mt-2">
                         Feel free to <span className="text-cyan-600 font-semibold">connect</span> with me
                     </p>
-                    <ul className="flex justify-center md:justify-end items-center gap-6 mt-4 text-2xl text-gray-700">
+                    <ul className="flex justify-center md:justify-start items-center gap-6 mt-4 text-2xl sm:text-3xl text-gray-700">
                         <li>
                             <a
-                                href="https://github.com/CodeWithNitesh7/ "
+                                href="https://github.com/CodeWithNitesh7/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="hover:text-cyan-600 transition"
@@ -78,7 +75,7 @@ export default function Intrduce() {
                         </li>
                         <li>
                             <a
-                                href="https://twitter.com/Soumyajit4419"
+                                href="https://twitter.com/justtsiddharth"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="hover:text-cyan-600 transition"

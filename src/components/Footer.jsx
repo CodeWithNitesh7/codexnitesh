@@ -1,7 +1,13 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from "lucide-react"; // icons ke liye
+import { useNavigate } from 'react-router-dom';
 
 export default function Footer() {
+  const naviagte = useNavigate();
+
+  const project = () => {
+    naviagte('/projects');
+  }
   return (
     <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-3 sm:grid-cols-1 gap-8">
@@ -39,11 +45,11 @@ export default function Footer() {
         <div className="space-y-3">
           <h2 className="text-lg font-semibold">Projects</h2>
           <ul className="space-y-2 text-gray-400">
-            <li><a href="#" className="hover:text-white">Gym Management</a></li>
-            <li><a href="#" className="hover:text-white">Quiz App</a></li>
-            <li><a href="#" className="hover:text-white">Portfolio Website</a></li>
-            <li><a href="#" className="hover:text-white text-yellow-600">See More</a></li>
-            
+            <li><a onClick={project} className="hover:text-white">Gym Management</a></li>
+            <li><a onClick={project} className="hover:text-white">Quiz App</a></li>
+            <li><a onClick={project} className="hover:text-white">Portfolio Website</a></li>
+            <li><a onClick={project} className="hover:text-white text-yellow-600">See More</a></li>
+
           </ul>
         </div>
       </div>
