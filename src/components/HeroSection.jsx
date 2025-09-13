@@ -35,7 +35,7 @@ export default function HeroSection() {
     }, [subIndex, index, reverse]);
 
     return (
-        <div className="bg-[#ACDBFB]/50 min-h-screen flex flex-col-reverse sm:flex-row items-center px-4 sm:px-12 py-6 sm:py-12 gap-4 sm:gap-8">
+        <div className="bg-[#ACDBFB]/50 md:min-h-screen flex flex-col-reverse sm:flex-row items-center px-4 sm:px-12 py-6 sm:py-12 gap-4 sm:gap-8">
             {/* Text Section */}
             <div className="flex-1 flex flex-col justify-center space-y-3 sm:space-y-6 text-center sm:text-left">
                 <h1 className="text-3xl sm:text-5xl font-bold text-gray-800">
