@@ -35,18 +35,9 @@ export default function HeroSection() {
     }, [subIndex, index, reverse]);
 
     return (
-        <div className="bg-[#ACDBFB]/50 min-h-screen flex flex-col sm:flex-row items-center justify-center px-6 sm:px-12 py-10 gap-8">
-            {/* Image Section */}
-            <div className="flex justify-center sm:justify-start order-1 sm:order-none">
-                <img
-                    src="/me.png"
-                    alt="Smart Coder"
-                    className="h-40 w-40 sm:h-72 sm:w-72 md:h-96 md:w-96 shadow-xl rounded-full object-cover"
-                />
-            </div>
-
+        <div className="bg-[#ACDBFB]/50 min-h-screen flex flex-col-reverse sm:flex-row items-center px-4 sm:px-12 py-6 sm:py-12 gap-4 sm:gap-8">
             {/* Text Section */}
-            <div className="text-center sm:text-left space-y-4 sm:space-y-6">
+            <div className="flex-1 flex flex-col justify-center space-y-3 sm:space-y-6 text-center sm:text-left">
                 <h1 className="text-3xl sm:text-5xl font-bold text-gray-800">
                     Hi, I'm <span className="text-cyan-700">Nitesh Gupta</span>
                 </h1>
@@ -54,10 +45,20 @@ export default function HeroSection() {
                     A passionate full-stack developer who loves building modern web applications.
                 </p>
 
+                {/* Typing Animation */}
                 <h2 className="text-lg sm:text-3xl font-bold text-cyan-700">
                     {texts[index].substring(0, subIndex)}
                     <span className="border-r-2 border-cyan-700 animate-pulse ml-1"></span>
                 </h2>
+            </div>
+
+            {/* Image Section */}
+            <div className="flex-1 flex justify-center sm:justify-start">
+                <img
+                    src="/me.png"
+                    alt="Smart Coder"
+                    className="h-56 w-56 sm:h-80 sm:w-80 md:h-96 md:w-96 shadow-xl rounded-full object-cover"
+                />
             </div>
         </div>
     );
