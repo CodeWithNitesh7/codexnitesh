@@ -10,9 +10,9 @@ export default function HeroSection() {
         "Freelancer"
     ];
 
-    const [index, setIndex] = useState(0); // current text index
-    const [subIndex, setSubIndex] = useState(0); // current character index
-    const [reverse, setReverse] = useState(false); // typing or deleting
+    const [index, setIndex] = useState(0);
+    const [subIndex, setSubIndex] = useState(0);
+    const [reverse, setReverse] = useState(false);
 
     useEffect(() => {
         if (index === texts.length) return;
@@ -35,9 +35,18 @@ export default function HeroSection() {
     }, [subIndex, index, reverse]);
 
     return (
-        <div className="bg-[#ACDBFB]/50 min-h-screen flex flex-col-reverse sm:flex-row items-center px-6 sm:px-12 py-12 gap-8">
+        <div className="bg-[#ACDBFB]/50 min-h-screen flex flex-col sm:flex-row items-center justify-center px-6 sm:px-12 py-10 gap-8">
+            {/* Image Section */}
+            <div className="flex justify-center sm:justify-start order-1 sm:order-none">
+                <img
+                    src="/me.png"
+                    alt="Smart Coder"
+                    className="h-40 w-40 sm:h-72 sm:w-72 md:h-96 md:w-96 shadow-xl rounded-full object-cover"
+                />
+            </div>
+
             {/* Text Section */}
-            <div className="flex-1 flex flex-col justify-center space-y-4 sm:space-y-6 text-center sm:text-left">
+            <div className="text-center sm:text-left space-y-4 sm:space-y-6">
                 <h1 className="text-3xl sm:text-5xl font-bold text-gray-800">
                     Hi, I'm <span className="text-cyan-700">Nitesh Gupta</span>
                 </h1>
@@ -45,20 +54,10 @@ export default function HeroSection() {
                     A passionate full-stack developer who loves building modern web applications.
                 </p>
 
-                {/* Typing Animation */}
-                <h2 className="text-xl sm:text-3xl font-bold text-cyan-700">
+                <h2 className="text-lg sm:text-3xl font-bold text-cyan-700">
                     {texts[index].substring(0, subIndex)}
                     <span className="border-r-2 border-cyan-700 animate-pulse ml-1"></span>
                 </h2>
-            </div>
-
-            {/* Image Section */}
-            <div className="flex-1 flex justify-center sm:justify-start">
-                <img
-                    src="/me.png"
-                    alt="Smart Coder"
-                    className="h-48 w-48 sm:h-80 sm:w-80 md:h-96 md:w-96 shadow-xl rounded-full object-cover"
-                />
             </div>
         </div>
     );
