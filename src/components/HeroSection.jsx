@@ -53,7 +53,7 @@ export default function HeroSection() {
             </div>
 
             {/* Image Section */}
-            <div className="flex-1 flex justify-center sm:justify-end">
+            <div className="flex-1 flex justify-center sm:justify-start">
                 <img
                     src="/me.png"
                     alt="Smart Coder"
