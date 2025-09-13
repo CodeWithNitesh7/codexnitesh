@@ -64,7 +64,7 @@ export default function Resume() {
                     <p className="text-gray-600 font-semibold">Full-Stack Developer</p>
                     <div className="flex flex-wrap gap-4 text-sm text-gray-500">
                         <span >Email: niteshgupta@gmail.com</span>
-                        <span>Phone: +91 9876543210</span>
+                        <span>Phone: +91 8808824412</span>
                         <span>Github: CodeWithNitesh7</span>
                         <span>Linkdin: Nitesh Gupta</span>
                     </div>
