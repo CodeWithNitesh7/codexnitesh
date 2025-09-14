@@ -31,7 +31,7 @@ export default function Footer() {
         <div className="space-y-3">
           <h2 className="text-lg font-semibold">Contact</h2>
           <p className="flex items-center gap-2 text-gray-400">
-            <Mail size={18} /> niteshgupta@gmail.com
+            <Mail size={18} /> niteshgupta0985@gmail.com
           </p>
           <p className="flex items-center gap-2 text-gray-400">
             <Phone size={18} /> +91 8808824412
