@@ -20,7 +20,7 @@ export default function Resume() {
     const downloadPDF = async () => {
         if (!resumeRef.current) return;
         const dataUrl = await toPng(resumeRef.current);
-        const pdf = new jsPDF("p", "mm", "a4");
+        const pdf = new jsPDF("p", "mm", "a1");
         const pdfWidth = pdf.internal.pageSize.getWidth();
         const pdfHeight = pdf.internal.pageSize.getHeight();
         pdf.addImage(dataUrl, "PNG", 0, 0, pdfWidth, pdfHeight);
