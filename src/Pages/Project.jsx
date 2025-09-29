@@ -78,7 +78,7 @@ const projects = [
         title: "Help and Support App ",
         description:
             "An Chat app for help and Support teams with varoius features thats help teams a lot.",
-        image: "/projects/portfolio.png",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNUDXFcRpFOXCl1-A4m1_UgYAZVRFNk6iyQg&s",
         github: "https://github.com/CodeWithNitesh7/ChatofHelpAndSupports",
         live: "https://yourliveurl.com",
         tech: ["React", "NodeJs", "Express", "TailwindCSS"],
