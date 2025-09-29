@@ -75,11 +75,11 @@ const projects = [
         tech: ["React", "NodeJs", "Express", "TailwindCSS"],
     },
     {
-        title: "Your Grocery ",
+        title: "Help and Support App ",
         description:
-            "An E-commerce website Where  user can buy a t-shirt for their perosnal use , and modified their t-shirt according to requirements .",
+            "An Chat app for help and Support teams with varoius features thats help teams a lot.",
         image: "/projects/portfolio.png",
-        github: "https://github.com/CodeWithNitesh7/Textwraps",
+        github: "https://github.com/CodeWithNitesh7/ChatofHelpAndSupports",
         live: "https://yourliveurl.com",
         tech: ["React", "NodeJs", "Express", "TailwindCSS"],
     },
