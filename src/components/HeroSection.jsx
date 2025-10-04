@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
     const texts = [
@@ -36,8 +37,14 @@ export default function HeroSection() {
 
     return (
         <div className="bg-[#ACDBFB]/50 md:min-h-screen flex flex-col-reverse sm:flex-row items-center px-4 sm:px-12 py-6 sm:py-12 gap-4 sm:gap-8">
-            {/* Text Section */}
-            <div className="flex-1 flex flex-col justify-center space-y-3 sm:space-y-6 text-center sm:text-left">
+
+            {/* Left Section */}
+            <motion.div
+                className="flex-1 flex flex-col justify-center space-y-3 sm:space-y-6 text-center sm:text-left"
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
                 <h1 className="text-3xl sm:text-5xl font-bold text-gray-800">
                     Hi, I'm <span className="text-cyan-700">Nitesh Gupta</span>
                 </h1>
@@ -45,21 +52,29 @@ export default function HeroSection() {
                     A passionate full-stack developer who loves building modern web applications.
                 </p>
 
-                {/* Typing Animation */}
                 <h2 className="text-lg sm:text-3xl font-bold text-cyan-700">
                     {texts[index].substring(0, subIndex)}
                     <span className="border-r-2 border-cyan-700 animate-pulse ml-1"></span>
                 </h2>
-            </div>
+            </motion.div>
 
-            {/* Image Section */}
-            <div className="flex-1 flex justify-center sm:justify-start">
-                <img
+            {/* Right Section */}
+            <motion.div
+                className="flex-1 flex md:justify-end lg:justify-end sm:justify-start relative"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
+
+
+                <motion.img
                     src="/me.png"
                     alt="Smart Coder"
-                    className="h-56 w-56 sm:h-80 sm:w-80 md:h-96 md:w-96 shadow-xl rounded-full object-cover"
+                    className="h-56 w-56 sm:h-80 sm:w-80 md:h-96 md:w-96 shadow-[0_0_25px_5px_rgba(0,255,255,0.6)] outline-4 outline-gray-100 rounded-full object-cover"
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 />
-            </div>
+            </motion.div>
         </div>
     );
 }
