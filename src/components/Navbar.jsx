@@ -41,7 +41,7 @@ export default function Navbar() {
 
             {/* Mobile Dropdown */}
             {isOpen && (
-                <div className="absolute top-16 left-0 w-full bg-[#ACDBFB] flex flex-col items-center gap-4 py-4 text-lg font-medium text-gray-700 md:hidden shadow-md">
+                <div className="absolute top-16 left-0 w-full bg-[#ACDBFB] flex flex-col items-center gap-4 py-4 text-lg font-medium text-gray-700 md:hidden shadow-md z-10">
                     <Link to="/" className="hover:text-cyan-600" onClick={() => setIsOpen(false)}>Home</Link>
                     <Link to="/about" className="hover:text-cyan-600" onClick={() => setIsOpen(false)}>About</Link>
                     <Link to="/projects" className="hover:text-cyan-600" onClick={() => setIsOpen(false)}>Projects</Link>
